@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1551814764 source:/home/atrivedi/C++ Projects/DataStructure/main.cpp
+	<iostream>
+	"binarytree.h"
+
+1551814786 /home/atrivedi/C++ Projects/DataStructure/include/binarytree.h
+	<cstddef>
+	<iostream>
+
+1551813912 source:/home/atrivedi/C++ Projects/DataStructure/src/binarytree.cpp
+	"binarytree.h"
+	<cstddef>
+
