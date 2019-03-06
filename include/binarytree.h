@@ -90,10 +90,76 @@ class binarytree
             inorder(root->getrchild());
         }
 
+        void preorder(Node *root){
+
+            if(root == nullptr)
+                return;
+
+            cout<<root->getdata()<<endl;
+            preorder(root->getlchild());
+            preorder(root->getrchild());
+        }
+
+        inline void postorder(Node *root);
+        inline bool iscontinous(Node *root);
+        inline bool isMirrorWithoutData(Node *roota, Node *rootb);
+        inline bool isfoldable(Node *root);
+
     protected:
 
     private:
         Node *root;
 };
+
+void binarytree::postorder(Node *root){
+
+    if(root == nullptr)
+        return;
+    postorder(root->getlchild());
+    postorder(root->getrchild());
+    cout<<root->getdata()<<endl;
+}
+
+bool binarytree::iscontinous(Node *root){
+
+    if (root == nullptr)
+        return true;
+
+    if (root->getlchild() == nullptr && root->getlchild() == nullptr)
+        return true;
+
+
+    if(root->getlchild() == nullptr){
+        if (abs(root->getdata() - root->getrchild()->getdata()) == 1 && iscontinous(root->getrchild()))
+            return true;
+        return false;
+    }
+
+    if(root->getrchild() == nullptr){
+        if (abs(root->getdata() - root->getlchild()->getdata()) == 1 && iscontinous(root->getlchild()))
+            return true;
+        return false;
+    }
+
+    return abs(root->getdata() - root->getrchild()->getdata()) ==1 &&
+           abs(root->getdata() - root->getlchild()->getdata()) ==1 &&
+           iscontinous(root->getrchild()) &&
+           iscontinous(root->getlchild());
+
+}
+
+bool binarytree::isMirrorWithoutData(Node *a, Node *b){
+
+    if (a == nullptr && b == nullptr)
+        return true;
+
+    if (a == nullptr || b == nullptr)
+        return false;
+
+    return isMirrorWithoutData(a->getlchild(), b->getrchild()) &&
+           isMirrorWithoutData(a->getrchild(), b->getlchild());
+
+}
+
 
 #endif // BINARYTREE_H
