@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main()
+/*int main()
 {
     binarytree *btree = new binarytree();
     btree->insertnode(btree->getroot(),2);
@@ -21,4 +21,4 @@ int main()
     }
 
     return 0;
-}
+}*/
