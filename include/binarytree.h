@@ -103,6 +103,7 @@ class binarytree
         inline void postorder(Node *root);
         inline bool iscontinous(Node *root);
         inline bool isMirrorWithoutData(Node *roota, Node *rootb);
+        inline bool isMirrorWithData(Node *roota, Node *rootb);
         inline bool isfoldable(Node *root);
 
     protected:
@@ -161,5 +162,16 @@ bool binarytree::isMirrorWithoutData(Node *a, Node *b){
 
 }
 
+bool binarytree::isMirrorWithData(Node *a, Node *b){
+    if(a == nullptr && b == nullptr)
+        return True;
+
+    if (a == nullptr || b == nullptr)
+        return False;
+
+    return (a->getdata() == b->getdata()) &&
+            this.isMirrorWithData(a->getlchild(), b->getrchild()) &&
+            this.isMirrorWithData(a->getrchild(), b->getlchild());
+}
 
 #endif // BINARYTREE_H
