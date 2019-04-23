@@ -3,11 +3,16 @@
 	<iostream>
 	"binarytree.h"
 
-1551894710 /home/atrivedi/C++ Projects/DataStructure/include/binarytree.h
+1551896690 /home/atrivedi/C++ Projects/DataStructure/include/binarytree.h
 	<cstddef>
 	<iostream>
 
 1551813912 source:/home/atrivedi/C++ Projects/DataStructure/src/binarytree.cpp
 	"binarytree.h"
 	<cstddef>
+
+1555911418 source:/home/atrivedi/C++ Projects/DataStructure/stack/stack.cpp
+	<iostream>
+	<stack>
+	<string>
 

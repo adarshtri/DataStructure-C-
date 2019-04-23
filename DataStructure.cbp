@@ -37,6 +37,7 @@
 		<Unit filename="include/binarytree.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/binarytree.cpp" />
+		<Unit filename="stack/stack.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
